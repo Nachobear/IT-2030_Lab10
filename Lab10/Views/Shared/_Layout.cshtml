@@ -1,0 +1,26 @@
+﻿
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/css/bootstrap.min.css" />
+    <script src="~/lib/jquery/jquery.min.js"></script>
+    <script src="~/lib/popper.js/popper.min.js"></script>
+    <script src="~/lib/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/ef7df1052a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="~/css/custom.css" />
+</head>
+<body>
+    <div class="container">
+        <header class="jumbotron text-center">
+            <h1>Tic Tac Toe</h1>
+        </header>
+
+        <main role="main">
+            @RenderBody();
+        </main>
+    </div>
+</body>
+</html>

@@ -1,0 +1,83 @@
+﻿@using Lab10.Models
+@model Game
+@{
+    ViewBag.Title = "TicTacToe";
+}
+@{ if (Model.IsGameOver)
+    {
+        <div class="text-center">
+            @{
+                if (@Model.IsATie)
+                {
+                    <h2>It's A Tie!</h2>
+                }
+                else
+                {
+                    <h2>@Model.CurrentPlayerName is the winner!</h2>
+                }
+            }
+
+            <form asp-action="NewGame" method="post">
+                <input type="submit" value="New Game" class="btn-outline-dark" />
+            </form>
+        </div>
+    }
+    else
+    {
+        <div class="text-center">
+            <h2>@Model.CurrentPlayerName's turn!</h2>
+        </div>
+
+    }
+
+}
+
+
+<div class="container customCentered">
+    <div class="row">
+
+       
+
+        <form asp-action="HandleClickOnSquare" asp-route-id="0" method="post">
+            <input type="submit" value="@Model.BoxValues[0]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+
+        <form asp-action="HandleClickOnSquare" asp-route-id="1" method="post">
+            <input type="submit" value="@Model.BoxValues[1]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+
+        <form asp-action="HandleClickOnSquare" asp-route-id="2" method="post">
+            <input type="submit" value="@Model.BoxValues[2]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+
+    </div>
+    <div class="row">
+        <form asp-action="HandleClickOnSquare" asp-route-id="3" method="post">
+            <input type="submit" value="@Model.BoxValues[3]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+
+        <form asp-action="HandleClickOnSquare" asp-route-id="4" method="post">
+            <input type="submit" value="@Model.BoxValues[4]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+
+        <form asp-action="HandleClickOnSquare" asp-route-id="5" method="post">
+            <input type="submit" value="@Model.BoxValues[5]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+    </div>
+    <div class="row">
+
+        <form asp-action="HandleClickOnSquare" asp-route-id="6" method="post">
+            <input type="submit" value="@Model.BoxValues[6]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+
+        <form asp-action="HandleClickOnSquare" asp-route-id="7" method="post">
+            <input type="submit" value="@Model.BoxValues[7]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+
+        <form asp-action="HandleClickOnSquare" asp-route-id="8" method="post">
+            <input type="submit" value="@Model.BoxValues[8]" class="btn btn-outline-dark ticTacToe" />
+        </form>
+
+    </div>
+</div>
+
